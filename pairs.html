@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Пары</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='pairs.css'>
+</head>
+<body>
+    <div class="main">
+        <div class="board">
+            <div class="stats">
+                <h2>Пары</h2>
+                <h5>Шаги: 0 шагов</h5>
+                <h5>Время: 60 секунд</h5>
+            </div>
+            <div class="settings">
+                <h2>Настроить количество карточек (от 2 до 6)</h2>
+                <form class="forma">
+                    <input placeholder="По горизонтали/вертикали" class="settings_input" min="2" max="6" type="number" step="2">
+                    <button class="start">НАЧАТЬ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <template id="gameTableTemplate">
+        <div class="table">1</div>
+        <button class="table_button">РЕСТАРТ</button>
+    </template>
+</body>
+<script src='pairs.js'></script>
+</html>
