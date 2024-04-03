@@ -6,6 +6,7 @@
     <title>Пары</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='pairs.css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
 </head>
 <body>
     <div class="main">
@@ -25,8 +26,14 @@
         </div>
     </div>
     <template id="gameTableTemplate">
-        <div class="table">1</div>
+        <div class="table"></div>
         <button class="table_button">РЕСТАРТ</button>
+    </template>
+    <template id="card">
+        <div class="cards">
+            <i class="flipped_icon fa" id="flippedIcon"></i>
+            <i class="default_icon fa fa-question-circle"></i>
+        </div>
     </template>
 </body>
 <script src='pairs.js'></script>
