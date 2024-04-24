@@ -1,3 +1,7 @@
+body {
+    background-image: url(14394545661d3f1f2b80a2.69458719Фон1.png);
+    background-size: 100% 100%;
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +24,7 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.345);
     padding: 30px 40px;
+    background-color: rgba(255, 255, 255, 0.539);
 }
 .settings {
     width: 100%;
@@ -43,10 +48,77 @@
     padding: 20px 45px 20px 20px;
     border-radius: 25px;
     outline: none; 
+    background-color: transparent;
+    color: black;
 }
 .default_icon {
-    display: none;
+    display: block;
+    pointer-events: none;
 }
 .flipped_icon {
+    display: none;
+    pointer-events: none;
+}
+.table {
+    display: grid;
+    min-width: 500px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.cards {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkseagreen;
+    border-radius: 5px;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.cards:hover {
+    background-color: rgba(143, 188, 143, 0.664);
+}
+.cards.flip {
+    background-color: rgb(104, 155, 104);
+    transform: perspective(100px)rotateY(180deg);
+    user-select: none;
+}
+.cards.flip .flipped_icon{
     display: block;
+}
+.cards.flip .default_icon{
+    display: none;
+}
+.cards.success {
+    background-color: pink;
+    transform: scale(0.95);
+}
+.confetti {
+    position: absolute;
+    width: 80%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 10%;
+}
+@keyframes move {
+    100%{
+        top: 95%;
+        transform: rotate(360deg);
+    }
+}
+.table_button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.table_button:hover {
+    color: rgba(181, 13, 181, 0.7);
+    border:  rgba(181, 13, 181, 0.7) solid;
 }
